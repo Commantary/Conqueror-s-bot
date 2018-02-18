@@ -21,7 +21,7 @@ tafonction()
   console.log('le prefix est: ' + setting.prefix)
 })
 
-ARRIVER DEPARTS
+//ARRIVER DEPARTS
 const arv = require('./module/arriverdeparts.js')
 arv(client)
 
