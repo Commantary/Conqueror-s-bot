@@ -9,7 +9,7 @@ const config = JSON.parse(fs.readFileSync('./module/config.json', 'utf8'))
 client.on('ready', () => {
    function tafonction(){
     // traitement
-    client.user.setGame('utilise la force', 'https://www.twitch.tv/the_commentary', 0)
+    client.user.setGame('Lancer des dès')
     setTimeout(tafonction,10000) /* rappel après 2 secondes = 2000 millisecondes */
     }
 
