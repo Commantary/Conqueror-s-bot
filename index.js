@@ -37,7 +37,84 @@ client.on('message', message => {
     let commandFile = require(`./module/${command}.js`)
     commandFile.run(client, message, args)
   } catch (err) {
-    console.error(err)
+    var max = message.content.slice(config.prefix.length).trim().split("d")
+    var nb = max.shift().toLowerCase();
+
+    
+
+    if (nb => 1){
+        switch (nb) {
+        case "1":
+          var result = Math.floor(Math.random() * max)
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + result + "\n```"
+          }})
+          break;
+
+        case "2":
+          var r1 = Math.floor(Math.random() * max)
+          var r2 = Math.floor(Math.random() * max)
+          var result = r1+r2
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + "\n```"
+          }})
+          break;
+
+        case "3":
+          var r1 = Math.floor(Math.random() * max)
+          var r2 = Math.floor(Math.random() * max)
+          var r3 = Math.floor(Math.random() * max)
+          var result = r1+r2+r3
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + "\n```"
+          }})
+          break;
+
+        case "4":
+          var r1 = Math.floor(Math.random() * max)
+          var r2 = Math.floor(Math.random() * max)
+          var r3 = Math.floor(Math.random() * max)
+          var r4 = Math.floor(Math.random() * max)
+          var result = r1+r2+r3+r4
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 +"\n```"
+          }})
+          break;
+
+        case "5":
+          var r1 = Math.floor(Math.random() * max)
+          var r2 = Math.floor(Math.random() * max)
+          var r3 = Math.floor(Math.random() * max)
+          var r4 = Math.floor(Math.random() * max)
+          var r5 = Math.floor(Math.random() * max)
+          var result = r1+r2+r3+r4+r5
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + "\n```"
+          }})
+          break;
+
+        case "6":
+          var r1 = Math.floor(Math.random() * max)
+          var r2 = Math.floor(Math.random() * max)
+          var r3 = Math.floor(Math.random() * max)
+          var r4 = Math.floor(Math.random() * max)
+          var r5 = Math.floor(Math.random() * max)
+          var r6 = Math.floor(Math.random() * max)
+          var result = r1+r2+r3+r4+r5+r6
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + "\n```"
+          }})
+          break;
+        }
+
+    }
+
   }
 })
 
