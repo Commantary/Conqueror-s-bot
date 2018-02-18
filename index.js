@@ -1,7 +1,6 @@
 // Mise en place des en tetes
 const discord = require('discord.js')
 const client = new discord.Client()
-const token = 'MzY0NjkwMzAwOTI2NDI3MTM4.DLTb0w.twS4DmRN3pfwm_y6gDA5oX0033Q'
 const setting = require('./module/config.json')
 const fs = require('fs')
 const config = JSON.parse(fs.readFileSync('./module/config.json', 'utf8'))
@@ -52,4 +51,11 @@ client.on('message', message => {
 })
 
 })
-client.login(token)
+
+var dt = process.env.TOKEN || process.argv[2]
+
+if (!dt) {
+  console.log('')
+}
+
+client.login(dt)
