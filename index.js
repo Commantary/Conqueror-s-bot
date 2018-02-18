@@ -46,6 +46,9 @@ client.on('message', message => {
         switch (nb) {
         case "1":
           var result = Math.floor(Math.random() * max)
+          if (result != 6){
+            result+1
+          }
           message.channel.send({embed: {
             color: 12434877,
             description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + result + "\n```"
@@ -54,7 +57,13 @@ client.on('message', message => {
 
         case "2":
           var r1 = Math.floor(Math.random() * max)
+          if (r1 != 6){
+            r1+1
+          }
           var r2 = Math.floor(Math.random() * max)
+          if (r2 != 6){
+            r2+1
+          }
           var result = r1+r2
           message.channel.send({embed: {
             color: 12434877,
@@ -64,8 +73,17 @@ client.on('message', message => {
 
         case "3":
           var r1 = Math.floor(Math.random() * max)
+          if (r1 != 6){
+            r1+1
+          }
           var r2 = Math.floor(Math.random() * max)
+          if (r2 != 6){
+            r2+1
+          }
           var r3 = Math.floor(Math.random() * max)
+          if (r3 != 6){
+            r3+1
+          }
           var result = r1+r2+r3
           message.channel.send({embed: {
             color: 12434877,
@@ -75,9 +93,21 @@ client.on('message', message => {
 
         case "4":
           var r1 = Math.floor(Math.random() * max)
+          if (r1 != 6){
+            r1+1
+          }
           var r2 = Math.floor(Math.random() * max)
+          if (r2 != 6){
+            r2+1
+          }
           var r3 = Math.floor(Math.random() * max)
+          if (r3 != 6){
+            r3+1
+          }
           var r4 = Math.floor(Math.random() * max)
+          if (r4 != 6){
+            r4+1
+          }
           var result = r1+r2+r3+r4
           message.channel.send({embed: {
             color: 12434877,
@@ -87,10 +117,25 @@ client.on('message', message => {
 
         case "5":
           var r1 = Math.floor(Math.random() * max)
+          if (r1 != 6){
+            r1+1
+          }
           var r2 = Math.floor(Math.random() * max)
+          if (r2 != 6){
+            r2+1
+          }
           var r3 = Math.floor(Math.random() * max)
+          if (r3 != 6){
+            r3+1
+          }
           var r4 = Math.floor(Math.random() * max)
+          if (r4 != 6){
+            r4+1
+          }
           var r5 = Math.floor(Math.random() * max)
+          if (r5 != 6){
+            r5+1
+          }
           var result = r1+r2+r3+r4+r5
           message.channel.send({embed: {
             color: 12434877,
@@ -100,11 +145,29 @@ client.on('message', message => {
 
         case "6":
           var r1 = Math.floor(Math.random() * max)
+          if (r1 != 6){
+            r1+1
+          }
           var r2 = Math.floor(Math.random() * max)
+          if (r2 != 6){
+            r2+1
+          }
           var r3 = Math.floor(Math.random() * max)
+          if (r3 != 6){
+            r3+1
+          }
           var r4 = Math.floor(Math.random() * max)
+          if (r4 != 6){
+            r4+1
+          }
           var r5 = Math.floor(Math.random() * max)
+          if (r5 != 6){
+            r5+1
+          }
           var r6 = Math.floor(Math.random() * max)
+          if (r6 != 6){
+            r6+1
+          }
           var result = r1+r2+r3+r4+r5+r6
           message.channel.send({embed: {
             color: 12434877,
