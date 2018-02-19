@@ -5,8 +5,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "10",
-		"armees": "9"
+		"planetes": 10,
+		"armees": 20
 	},
 	"codex2151": {
 		"id": "268459413637955585",
@@ -14,8 +14,8 @@
 		"empereur": "non",
 		"membre": "oui",
 		"power": "Sphère des Sciences Biotiques",
-		"planetes": "12",
-		"armees": "15"
+		"planetes": 10,
+		"armees": 20
 	},
 	"commandant wolffe": {
 		"id": "356103847661273089",
@@ -23,8 +23,8 @@
 		"empereur": "non",
 		"membre": "oui",
 		"power": "Sphère de la Stratégie Militaire",
-		"planetes": "8",
-		"armees": "6"
+		"planetes": 10,
+		"armees": 20
 	},
 	"commentary": {
 		"id": "214846601066315776",
@@ -32,8 +32,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "10",
-		"armees": "12"
+		"planetes": 10,
+		"armees": 20
 	},
 	"dark sal0cin !": {
 		"id": "407165068640387072",
@@ -41,8 +41,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "9",
-		"armees": "9"
+		"planetes": 10,
+		"armees": 20
 	},
 	"dark phenix": {
 		"id": "329261347093348353",
@@ -50,8 +50,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "0",
-		"armees": "1"
+		"planetes": 10,
+		"armees": 20
 	},
 	"d3struct0r": {
 		"id": "414546483115982858",
@@ -59,8 +59,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "9",
-		"armees": "16"
+		"planetes": 10,
+		"armees": 20
 	},
 	"dhokaz": {
 		"id": "276007738306199552",
@@ -68,8 +68,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "10",
-		"armees": "9"
+		"planetes": 10,
+		"armees": 20
 	},
 	"kinetyk": {
 		"id": "178785720721342464",
@@ -77,8 +77,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "13",
-		"armees": "14"
+		"planetes": 10,
+		"armees": 20
 	},
 	"lukis brans": {
 		"id": "294507843724509186",
@@ -86,8 +86,8 @@
 		"empereur": "non",
 		"membre": "oui",
 		"power": "Sphère de la Technologie",
-		"planetes": "11",
-		"armees": "12"
+		"planetes": 10,
+		"armees": 20
 	},
 	"mangasonic447": {
 		"id": "371021968159277068",
@@ -95,8 +95,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "12",
-		"armees": "14"
+		"planetes": 10,
+		"armees": 20
 	},
 	"neoxis": {
 		"id": "394900221127032843",
@@ -104,8 +104,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "0",
-		"armees": "0"
+		"planetes": 10,
+		"armees": 20
 	},
 	"nihilus": {
 		"id": "369157584701095948",
@@ -113,8 +113,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "11",
-		"armees": "11"
+		"planetes": 10,
+		"armees": 20
 	},
 	"quadpool": {
 		"id": "401439564469764106",
@@ -122,8 +122,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "10",
-		"armees": "20"
+		"planetes": 10,
+		"armees": 20
 	},
 	"redburne": {
 		"id": "379345863903936522",
@@ -131,8 +131,8 @@
 		"empereur": "non",
 		"membre": "oui",
 		"power": "Sphère de l'Offensive Militaire",
-		"planetes": "11",
-		"armees": "19"
+		"planetes": 10,
+		"armees": 20
 	},
 	"super'z": {
 		"id": "274599466689101834",
@@ -140,8 +140,8 @@
 		"empereur": "non",
 		"membre": "oui",
 		"power": "Sphère de la Diplomatie ",
-		"planetes": "19",
-		"armees": "23"
+		"planetes": 10,
+		"armees": 20
 	},
 	"the_draik": {
 		"id": "264030180681580554",
@@ -149,8 +149,8 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "10",
-		"armees": "20"
+		"planetes": 10,
+		"armees": 20
 	},
 	"twido": {
 		"id": "331769645864321025",
@@ -158,7 +158,7 @@
 		"empereur": "non",
 		"membre": "Ne fais pas partie du Conseil Noir",
 		"power": "Aucun",
-		"planetes": "12",
-		"armees": "6"
+		"planetes": 10,
+		"armees": 20
 	}
 }

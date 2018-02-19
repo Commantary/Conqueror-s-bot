@@ -2,9 +2,8 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var bdd = process.env.BDD || process.argv[2]
-
 module.exports.run = async (client, message, args) => {
-
+	console.log(args[0] + "|" + args[1] + "|" + args[2])
 	if (args[0]==="profil"){
 			request.get(bdd, function (err, res, body) {
 			var data = JSON.parse(body)
