@@ -37,11 +37,13 @@ client.on('message', message => {
     let commandFile = require(`./module/${command}.js`)
     commandFile.run(client, message, args)
   } catch (err) {
+    // Variables
     var maxx = Number(message.content.slice(config.prefix.length).trim().split("d"))
     var max = message.content.slice(config.prefix.length).trim().split("d")
     var nb = max.shift().toLowerCase();
     var min = 1
 
+    // Début du programme ! ;D
     if (max !== undefined){
       if (nb => 0){
         switch (nb) {
