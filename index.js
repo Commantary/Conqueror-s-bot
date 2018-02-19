@@ -37,18 +37,15 @@ client.on('message', message => {
     let commandFile = require(`./module/${command}.js`)
     commandFile.run(client, message, args)
   } catch (err) {
+    var maxx = Number(message.content.slice(config.prefix.length).trim().split("d"))
     var max = message.content.slice(config.prefix.length).trim().split("d")
     var nb = max.shift().toLowerCase();
-
-    
+    var min = 1
 
     if (nb => 1){
         switch (nb) {
         case "1":
-          var result = Math.floor(Math.random() * max)
-          if (result = 0){
-            result+1
-          }
+          var result = Math.floor(Math.random() * (max - min) + min);
           message.channel.send({embed: {
             color: 12434877,
             description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + result + "\n```"
@@ -56,14 +53,8 @@ client.on('message', message => {
           break;
 
         case "2":
-          var r1 = Math.floor(Math.random() * max)
-          if (r1 = 0){
-            r1+1
-          }
-          var r2 = Math.floor(Math.random() * max)
-          if (r2 = 0){
-            r2+1
-          }
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2
           message.channel.send({embed: {
             color: 12434877,
@@ -72,15 +63,9 @@ client.on('message', message => {
           break;
 
         case "3":
-          var r1 = Math.floor(Math.random() * max)
-          if (r1 = 0){
-            r1+1
-          }
-          var r2 = Math.floor(Math.random() * max)
-          if (r2 = 0){
-            r2+1
-          }
-          var r3 = Math.floor(Math.random() * max)
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
           if (r3 = 0){
             r3+1
           }
@@ -92,22 +77,10 @@ client.on('message', message => {
           break;
 
         case "4":
-          var r1 = Math.floor(Math.random() * max)
-          if (r1 = 0){
-            r1+1
-          }
-          var r2 = Math.floor(Math.random() * max)
-          if (r2 = 0){
-            r2+1
-          }
-          var r3 = Math.floor(Math.random() * max)
-          if (r3 = 0){
-            r3+1
-          }
-          var r4 = Math.floor(Math.random() * max)
-          if (r4 = 0){
-            r4+1
-          }
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4
           message.channel.send({embed: {
             color: 12434877,
@@ -116,26 +89,11 @@ client.on('message', message => {
           break;
 
         case "5":
-          var r1 = Math.floor(Math.random() * max)
-          if (r1 = 0){
-            r1+1
-          }
-          var r2 = Math.floor(Math.random() * max)
-          if (r2 = 0){
-            r2+1
-          }
-          var r3 = Math.floor(Math.random() * max)
-          if (r3 = 0){
-            r3+1
-          }
-          var r4 = Math.floor(Math.random() * max)
-          if (r4 = 0){
-            r4+1
-          }
-          var r5 = Math.floor(Math.random() * max)
-          if (r5 = 0){
-            r5+1
-          }
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5
           message.channel.send({embed: {
             color: 12434877,
@@ -144,34 +102,31 @@ client.on('message', message => {
           break;
 
         case "6":
-          var r1 = Math.floor(Math.random() * max)
-          if (r1 = 0){
-            r1+1
-          }
-          var r2 = Math.floor(Math.random() * max)
-          if (r2 = 0){
-            r2+1
-          }
-          var r3 = Math.floor(Math.random() * max)
-          if (r3 = 0){
-            r3+1
-          }
-          var r4 = Math.floor(Math.random() * max)
-          if (r4 = 0){
-            r4+1
-          }
-          var r5 = Math.floor(Math.random() * max)
-          if (r5 = 0){
-            r5+1
-          }
-          var r6 = Math.floor(Math.random() * max)
-          if (r6 = 0){
-            r6+1
-          }
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6
           message.channel.send({embed: {
             color: 12434877,
             description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + "\n```"
+          }})
+          break;
+
+        case "7":
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
+          var result = r1+r2+r3+r4+r5+r6
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + "\n```"
           }})
           break;
         }
