@@ -124,7 +124,7 @@ client.on('message', message => {
           var r5 = Math.floor(Math.random() * (max - min) + min);
           var r6 = Math.floor(Math.random() * (max - min) + min);
           var r7 = Math.floor(Math.random() * (max - min) + min);
-          var result = r1+r2+r3+r4+r5+r6
+          var result = r1+r2+r3+r4+r5+r6+r7
           message.channel.send({embed: {
             color: 12434877,
             description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + "\n```"
@@ -139,10 +139,11 @@ client.on('message', message => {
           var r5 = Math.floor(Math.random() * (max - min) + min);
           var r6 = Math.floor(Math.random() * (max - min) + min);
           var r7 = Math.floor(Math.random() * (max - min) + min);
-          var result = r1+r2+r3+r4+r5+r6
+          var r8 = Math.floor(Math.random() * (max - min) + min);
+          var result = r1+r2+r3+r4+r5+r6+r7+r8
           message.channel.send({embed: {
             color: 12434877,
-            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + "\n```"
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + " + " + r8 + "\n```"
           }})
           break;
         } // FIN DU SWITCH
