@@ -42,7 +42,8 @@ client.on('message', message => {
     var nb = max.shift().toLowerCase();
     var min = 1
 
-    if (nb => 1){
+    if (max !== undefined){
+      if (nb => 1){
         switch (nb) {
         case "1":
           var result = Math.floor(Math.random() * (max - min) + min);
@@ -129,9 +130,31 @@ client.on('message', message => {
             description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + "\n```"
           }})
           break;
-        }
 
+        case "8":
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
+          var result = r1+r2+r3+r4+r5+r6
+          message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# " + result + "\n```\n```Markdown\n" + r1 + " + " + r2 + " + " + r3 + " + " + r4 + " + " + r5 + " + " + r6 + " + " + r7 + "\n```"
+          }})
+          break;
+        } // FIN DU SWITCH
+      } else {// FIN DU IF 
+        message.channel.send({embed: {
+            color: 12434877,
+            description: "```Markdown\n# 0\n```\n```Markdown\n0\n```"
+        }})
+      }
     }
+
+    
 
   }
 })
