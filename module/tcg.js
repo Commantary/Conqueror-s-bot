@@ -1,67 +1,52 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
+var bdd = process.env.BDD || process.argv[2]
 
 module.exports.run = async (client, message, args) => {
 
-	request.get('https://api.myjson.com/bins/od6gh', function (err, res, body) {
-		var data = JSON.parse(body)
-		var searchPersonnUnverified = args[0]
-		
+	if (args[0]==="profil"){
+			request.get(bdd, function (err, res, body) {
+			var data = JSON.parse(body)
+			var searchPersonnUnverified = message.content.substring(12,50)
+			console.log(searchPersonnUnverified)
+			if(args[1]==undefined) return
 
-		if(args[0]==undefined) return
+			if (data[searchPersonnUnverified]!==undefined){
+				var searchPersonn = data[searchPersonnUnverified]
 
-		if (data[searchPersonnUnverified]!==undefined){
-			console.log('C pas undefined')
-			var searchPersonn = data[searchPersonnUnverified]
-			if (searchPersonn.membre === "non"){
+					message.channel.send({embed: {
+						color: 11133683,
+						fields: [{
+					        name: "Pseudo:",
+					        value: searchPersonn.name + "\n"
+					      },
+					      {
+					        name: "Membre du Conseil Noir",
+					        value: searchPersonn.membre
+					      },
+					      {
+					        name: "Pouvoir",
+					        value: searchPersonn.power
+					      },
+					      {
+					        name: "planètes:",
+					        value: searchPersonn.planetes + "\n"
+					      },
+					      {
+					      	name: "Armées:",
+					      	value: searchPersonn.armees + "\n"
+					      }
+					    ]
+					}}) // Fin de l'embed
+
+			} else {
 				message.channel.send({embed: {
-					fields: [{
-				        name: "Pseudo:",
-				        value: searchPersonn.name
-				      },
-				      {
-				        name: "Membre du Conseil Noir",
-				        value: "Ne fais pas partie du Conseil Noir"
-				      },
-				      {
-				        name: "planètes:",
-				        value: searchPersonn.planetes
-				      },
-				      {
-				      	name: "Armées:",
-				      	value: searchPersonn.armees
-				      }
-				    ]
-				}}) // Fin de l'embed
-			} else { // SI C UN MEMBRE DU CONSEILL NOIR
-				message.channel.send({embed: {
-					fields: [{
-				        name: "Pseudo:",
-				        value: searchPersonn.name
-				      },
-				      {
-				        name: "Membre du Conseil Noir",
-				        value: "Oui\n**Pouvoirs**: " searchPersonn.power
-				      },
-				      {
-				        name: "planètes:",
-				        value: searchPersonn.planetes
-				      },
-				      {
-				      	name: "Armées:",
-				      	value: searchPersonn.armees
-				      }
-				    ]
-				}}) // Fin de l'embed
+					description: 'Cette personne ne fais pas partie du jeu'
+				}})
 			}
-
-		} else {
-			message.channel.send({embed: {
-				description: 'Cette personne ne fais pas partie du jeu'
-			}})
-		}
-		
-	}) // FIN DU REQUEST
+			
+		}) // FIN DU REQUEST
+		} // FIN DU PROFIL
 
 } // FIN DU MODULE EXPORTS
