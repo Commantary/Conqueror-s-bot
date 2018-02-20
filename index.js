@@ -76,9 +76,6 @@ client.on('message', message => {
           var r1 = Math.floor(Math.random() * (max - min) + min);
           var r2 = Math.floor(Math.random() * (max - min) + min);
           var r3 = Math.floor(Math.random() * (max - min) + min);
-          if (r3 = 0){
-            r3+1
-          }
           var result = r1+r2+r3
           message.channel.send({embed: {
             color: 12434877,
