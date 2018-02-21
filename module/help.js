@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 
 		message.channel.send({embed: {
 		color: 11133683,
-		description: "0: Aucun\n1: Sphère du Mystère\n2: Sphère du Renseignement Impérial\n3: \n4: Sphère de la Technologie\n5: Sphère de la Diplomatie\n6: Sphère de la Défense de l'Empire\n7: Sphère de l'Offensive Militaire\n8: Sphère de la Stratégie Militaire\n9: Sphère de la Philosophie\na: Sphère du Savoir Ancestral\nb: Sphère de la Justice\nc: Sphère de la Logistique & Production"
+		description: "0: Aucun\n1: Sphère du Mystère\n2: Sphère du Renseignement Impérial\n3: Sphère des Sciences Biotiques\n4: Sphère de la Technologie\n5: Sphère de la Diplomatie\n6: Sphère de la Défense de l'Empire\n7: Sphère de l'Offensive Militaire\n8: Sphère de la Stratégie Militaire\n9: Sphère de la Philosophie\na: Sphère du Savoir Ancestral\nb: Sphère de la Justice\nc: Sphère de la Logistique & Production"
 		}})
 
 	} else {
