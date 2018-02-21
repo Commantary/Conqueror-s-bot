@@ -2,14 +2,14 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var bdd = process.env.BDD || process.argv[2]
+
 module.exports.run = async (client, message, args) => {
 	console.log(args[0] + "|" + args[1] + "|" + args[2])
-	if (args[0]==="profil"){
 			request.get(bdd, function (err, res, body) {
 			var data = JSON.parse(body)
-			var searchPersonnUnverified = message.content.substring(12,50)
+			var searchPersonnUnverified = message.content.substring(8,50)
 			console.log(searchPersonnUnverified)
-			if(args[1]==undefined) return
+			if(args[0]==undefined) return
 
 			if (data[searchPersonnUnverified]!==undefined){
 				var searchPersonn = data[searchPersonnUnverified]
@@ -46,6 +46,5 @@ module.exports.run = async (client, message, args) => {
 			}
 			
 		}) // FIN DU REQUEST
-		} // FIN DU PROFIL
 
 } // FIN DU MODULE EXPORTS
