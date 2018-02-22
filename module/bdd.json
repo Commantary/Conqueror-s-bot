@@ -1,22 +1,4 @@
 {
-  "antoine": {
-    "id": "305366235376517123",
-    "name": "!Antoine!",
-    "empereur": "non",
-    "membre": "Ne fais pas partie du Conseil Noir",
-    "power": "Aucun",
-    "planetes": 10,
-    "armees": 20
-  },
-  "codex2151": {
-    "id": "268459413637955585",
-    "name": "!Codex2151!",
-    "empereur": "non",
-    "membre": "oui",
-    "power": "Sphère des Sciences Biotiques",
-    "planetes": 10,
-    "armees": 20
-  },
   "commandant wolffe": {
     "id": "356103847661273089",
     "name": "!Commandant Wolffe!",
@@ -134,15 +116,6 @@
     "planetes": 10,
     "armees": 21
   },
-  "super'z": {
-    "id": "274599466689101834",
-    "name": "!Super'Z!",
-    "empereur": "non",
-    "membre": "oui",
-    "power": "Sphère de la Diplomatie ",
-    "planetes": 10,
-    "armees": 20
-  },
   "the_draik": {
     "id": "264030180681580554",
     "name": "!The_DraiK!",
@@ -191,6 +164,14 @@
   "humanity": {
     "id": "411899249286971402",
     "name": "!humanity!",
+    "empereur": "non",
+    "membre": "Ne fais pas partie du Conseil Noir",
+    "power": "Aucun",
+    "planetes": 10,
+    "armees": 20
+  },
+  "envylio": {
+    "name": "!envylio!",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
