@@ -17,14 +17,14 @@ module.exports.run = async (client, message, args) => {
 
 		for(i=0;i<teste.length;i++){
 				i++
-				array[a] = "[" + c + "] " + teste[i]
+				array[a] = "**[" + c + "]** " + teste[i]
 				console.log(array[a] + "|" + teste[i] + "|")
 				a++
 				c++
 		}
 		a--
 		c--
-		array[a] = "[" + c + "] ?????"
+		array[a] = "**[" + c + "]** ?????"
 		message.channel.send({embed: {
 			color: 11133683,
 			author: {
