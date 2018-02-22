@@ -29,6 +29,11 @@ module.exports.run = async (client, message, args) => {
 			}
 			// On put tout sa!
 			request({ url: bdd, method: 'PUT', json: data}, callback)
+
+			message.channel.send({embed: {
+				color: 11133683,
+				description: "**" + guyAtAdd + "** a été rajouter au jeu !"
+			}})
 		})
 
 	}
