@@ -20,7 +20,8 @@ module.exports.run = async (client, message, args) => {
 			var data = JSON.parse(body)
 
 			data[guyLowerCase] = {
-				"name": "!" + guyAtAdd + "!",
+				"tag": "!" + guyAtAdd + "!",
+				"name": guyAtAdd,
 				"empereur": "non",
 				"membre": "Ne fais pas partie du Conseil Noir",
 				"power": "Aucun",

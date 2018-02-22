@@ -1,7 +1,8 @@
 {
   "commandant wolffe": {
     "id": "356103847661273089",
-    "name": "!Commandant Wolffe!",
+    "tag": "!Commandant Wolffe!",
+    "name": "Commandant Wolffe",
     "empereur": "non",
     "membre": "oui",
     "power": "Sphère de la Stratégie Militaire",
@@ -10,7 +11,8 @@
   },
   "commentary": {
     "id": "214846601066315776",
-    "name": "!Commentary!",
+    "tag": "!Commentary!",
+    "name": "Commentary",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -19,7 +21,8 @@
   },
   "dark sal0cin": {
     "id": "407165068640387072",
-    "name": "!Dark Sal0cin!",
+    "tag": "!Dark Sal0cin!",
+    "name": "Dark Sal0cin",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -28,7 +31,8 @@
   },
   "dark phenix": {
     "id": "329261347093348353",
-    "name": "!Dark Phenix!",
+    "tag": "!Dark Phenix!",
+    "name": "Dark Phenix",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -37,7 +41,8 @@
   },
   "d3struct0r": {
     "id": "414546483115982858",
-    "name": "!D3struct0r!",
+    "tag": "!D3struct0r!",
+    "name": "D3struct0r",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -46,7 +51,8 @@
   },
   "dhokaz": {
     "id": "276007738306199552",
-    "name": "!Dhokaz!",
+    "tag": "!Dhokaz!",
+    "name": "Dhokaz",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -55,7 +61,8 @@
   },
   "kinetyk": {
     "id": "178785720721342464",
-    "name": "!Kinetyk!",
+    "tag": "!Kinetyk!",
+    "name": "Kinetyk",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -64,7 +71,8 @@
   },
   "lukis brans": {
     "id": "294507843724509186",
-    "name": "!Lukis Brans!",
+    "tag": "!Lukis Brans!",
+    "name": "Lukis Brans",
     "empereur": "non",
     "membre": "oui",
     "power": "Sphère de la Technologie",
@@ -73,7 +81,8 @@
   },
   "mangasonic447": {
     "id": "371021968159277068",
-    "name": "!MANGASONIC447!",
+    "tag": "!MANGASONIC447!",
+    "name": "MANGASONIC447",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -82,7 +91,8 @@
   },
   "neoxis": {
     "id": "394900221127032843",
-    "name": "!Neoxis!",
+    "tag": "!Neoxis!",
+    "name": "Neoxis",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -91,7 +101,8 @@
   },
   "nihilus": {
     "id": "369157584701095948",
-    "name": "!Nihilus!",
+    "tag": "!Nihilus!",
+    "name": "Nihilus",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -100,7 +111,8 @@
   },
   "quadpool": {
     "id": "401439564469764106",
-    "name": "!Quadpool!",
+    "tag": "!Quadpool!",
+    "name": "Quadpool",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -109,7 +121,8 @@
   },
   "redburne": {
     "id": "379345863903936522",
-    "name": "!Redburne!",
+    "tag": "!Redburne!",
+    "name": "Redburne",
     "empereur": "non",
     "membre": "oui",
     "power": "Sphère de l'Offensive Militaire",
@@ -118,7 +131,8 @@
   },
   "the_draik": {
     "id": "264030180681580554",
-    "name": "!The_DraiK!",
+    "tag": "!The_DraiK!",
+    "name": "The_DraiK",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -127,7 +141,8 @@
   },
   "twido": {
     "id": "331769645864321025",
-    "name": "!Twido!",
+    "tag": "!Twido!",
+    "name": "Twido",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -136,7 +151,8 @@
   },
   "kaeling": {
     "id": "395993182179164161",
-    "name": "!Kaeling!",
+    "tag": "!Kaeling!",
+    "name": "Kaeling",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -145,7 +161,8 @@
   },
   "the kirm": {
     "id": "405026890567516180",
-    "name": "!THE KIRM!",
+    "tag": "!THE KIRM!",
+    "name": "THE KIRM",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -154,7 +171,8 @@
   },
   "skywalker_21": {
     "id": "380419133067624448",
-    "name": "!Skywalker_21!",
+    "tag": "!Skywalker_21!",
+    "name": "Skywalker_21",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -163,7 +181,8 @@
   },
   "humanity": {
     "id": "411899249286971402",
-    "name": "!humanity!",
+    "tag": "!humanity!",
+    "name": "humanity",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
@@ -171,7 +190,8 @@
     "armees": 20
   },
   "envylio": {
-    "name": "!envylio!",
+    "tag": "!envylio!",
+    "name": "envylio",
     "empereur": "non",
     "membre": "Ne fais pas partie du Conseil Noir",
     "power": "Aucun",
