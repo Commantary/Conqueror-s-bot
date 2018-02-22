@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 		var teste = body.split("!")
 		console.log(teste[1])
 
-		for(i=1;i<teste.length;i++){
+		for(i=0;i<teste.length;i++){
 				i++
 				array[a] = "[" + c + "] " + teste[i]
 				console.log(array[a] + "|" + teste[i] + "|")
