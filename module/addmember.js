@@ -2,6 +2,7 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var bdd = process.env.BDD || process.argv[2]
+var bdd_number = process.env.BDDNUMBER || process.argv[2]
 
 module.exports.run = async (client, message, args) => {
 
@@ -14,7 +15,6 @@ module.exports.run = async (client, message, args) => {
 		      }
 		    } // FIN DE CALLBACK
 
-		    console.log(message.content.substring(11,50))
 			var guyAtAdd = message.content.substring(11,50)
 			var guyLowerCase = guyAtAdd.toLowerCase()
 			var data = JSON.parse(body)
@@ -35,6 +35,27 @@ module.exports.run = async (client, message, args) => {
 				color: 11133683,
 				description: "**" + guyAtAdd + "** a été rajouter au jeu !"
 			}})
+
+				request.get(bdd_number, function (err, res, body) {
+					function callback(err, response, body) { // DEBUT DE CALLBACK
+				      if (err) {
+				        console.log(err)
+				      }
+				    } // FIN DE CALLBACK
+
+				var json = JSON.parse(body)
+				var number = json.number
+				var personnToAdd = message.content.substring(11,50)
+				number++
+				json[number] = {
+					"name": personnToAdd
+				}
+				json.number = number
+
+				// On put tout sa!
+				request({ url: bdd_number, method: 'PUT', json: json}, callback)
+
+			})
 		})
 
 	}

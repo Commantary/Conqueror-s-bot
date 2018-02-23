@@ -2,6 +2,7 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var bdd = process.env.BDD || process.argv[2]
+var bdd_number = process.env.BDDNUMBER || process.argv[2]
 
 module.exports.run = async (client, message, args) => {
 	// LES VARIABLES
@@ -18,20 +19,33 @@ module.exports.run = async (client, message, args) => {
 		for(i=0;i<teste.length;i++){
 				i++
 				array[a] = "**[" + c + "]** " + teste[i]
-				console.log(array[a] + "|" + teste[i] + "|")
 				a++
 				c++
 		}
 		a--
 		c--
 		array[a] = "**[" + c + "]** ?????"
-		message.channel.send({embed: {
-			color: 11133683,
-			author: {
-	            name: 'Liste des joueurs'
-	          },
-			description: array.join('\n')
-		}})
+		
+		request.get(bdd_number, function (err, res, body) {
+			var json = JSON.parse(body)
+			var length_array = array.length-1
+			a = 0
+			
+			for(c = 1;a<length_array;){
+				var personn = json[c].name
+				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees
+				a++
+				c++
+			}
+
+			message.channel.send({embed: {
+				color: 11133683,
+				author: {
+		            name: 'Liste des joueurs'
+		          },
+				description: array.join('\n\n')
+			}})
+		})
 	})
 
 	// RESET DES VARIABLES
