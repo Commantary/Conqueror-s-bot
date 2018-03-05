@@ -77,7 +77,7 @@ module.exports.run = async (client, message, args) => {
 
 			      		message.channel.send({embed: {
 			      			color: 11133683,
-			      			description: "**" + message.author.username + "** a enlevé **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldFlottes + "\nMaintenant: # " + searchPersonn.armees + "\n```"
+			      			description: "**" + message.author.username + "** a enlevé **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldFlottes + "\nMaintenant: # " + searchPersonn.flottes + "\n```"
 			      		}})
 
 				    }
