@@ -35,6 +35,10 @@ module.exports.run = async (client, message, args) => {
 					      {
 					      	name: "Armées:",
 					      	value: searchPersonn.armees + "\n"
+					      },
+					      {
+					      	name: "Flottes:",
+					      	value: searchPersonn.flottes + "\n"
 					      }
 					    ]
 					}}) // Fin de l'embed

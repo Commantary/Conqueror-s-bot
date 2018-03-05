@@ -60,4 +60,28 @@ module.exports.run = async (client, message, args) => {
 			}) // FIN DU REQUEST
 	    } // FIN DE L'ADD ARMEES
 
+	    if(args[0]==="flotte"){
+	    	var searchPersonnUnverified = message.content.substring(17,50).trim()
+
+	    	request.get(bdd, function (err, res, body) {
+			    var data = JSON.parse(body)
+
+		    	if(data[searchPersonnUnverified]!==undefined){ // PR VERIF SI LE GARS EXISTE
+		    		// Variables
+		    		var searchPersonn = data[searchPersonnUnverified]
+		    			oldFlottes = searchPersonn.flottes
+				    	searchPersonn.flottes = searchPersonn.flottes-montant
+
+				    	// On put tout sa!
+			      		request({ url: bdd, method: 'PUT', json: data}, callback)
+
+			      		message.channel.send({embed: {
+			      			color: 11133683,
+			      			description: "**" + message.author.username + "** a enlevé **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldFlottes + "\nMaintenant: # " + searchPersonn.armees + "\n```"
+			      		}})
+
+				    }
+			}) // FIN DU REQUEST
+	    } // FIN DE L'ADD ARMEES
+
 } // FIN DU MODULE EXPORTS

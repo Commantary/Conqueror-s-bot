@@ -26,7 +26,8 @@ module.exports.run = async (client, message, args) => {
 				"membre": "Ne fais pas partie du Conseil Noir",
 				"power": "Aucun",
 			    "planetes": 10,
-			    "armees": 20
+			    "armees": 20,
+			    "flottes": 20
 			}
 			// On put tout sa!
 			request({ url: bdd, method: 'PUT', json: data}, callback)
