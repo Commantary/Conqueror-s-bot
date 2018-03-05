@@ -29,6 +29,10 @@ module.exports.run = async (client, message, args) => {
 					        value: searchPersonn.power
 					      },
 					      {
+					        name: "Description",
+					        value: searchPersonn.description
+					      },
+					      {
 					        name: "planètes:",
 					        value: searchPersonn.planetes + "\n"
 					      },
