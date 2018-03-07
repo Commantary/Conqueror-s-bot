@@ -211,7 +211,7 @@ client.on('message', message => {
             break;
 
         case "1":
-          var result = Math.floor(Math.random() * (adder - min) + min);
+          var result = Math.floor(Math.random() * (6 - min) + min);
           console.log(1)
           message.channel.send({embed: {
             color: 12434877,
@@ -358,7 +358,7 @@ client.on('message', message => {
             break;
 
         case "1":
-          var result = Math.floor(Math.random() * (adder - min) + min);
+          var result = Math.floor(Math.random() * (6 - min) + min);
           console.log(1)
           message.channel.send({embed: {
             color: 12434877,
