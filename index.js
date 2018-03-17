@@ -19,7 +19,7 @@ client.on('ready', () => {
       console.log(err)
     }
   }
-  setInterval(calling,86400000) // 24h = 86 400 000
+  setInterval(calling,43200000) // 24h = 86 400 000
     
   client.user.setGame('Lancer des dès')
   console.log('')
