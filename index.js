@@ -79,8 +79,8 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "2":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2
           message.channel.send({embed: {
             color: 12434877,
@@ -89,9 +89,9 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "3":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3
           message.channel.send({embed: {
             color: 12434877,
@@ -100,10 +100,10 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "4":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4
           message.channel.send({embed: {
             color: 12434877,
@@ -112,11 +112,11 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "5":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5
           message.channel.send({embed: {
             color: 12434877,
@@ -125,12 +125,12 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "6":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
-          var r6 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6
           message.channel.send({embed: {
             color: 12434877,
@@ -139,13 +139,13 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "7":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
-          var r6 = Math.floor(Math.random() * (max  min) + min);
-          var r7 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7
           message.channel.send({embed: {
             color: 12434877,
@@ -154,14 +154,14 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "8":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
-          var r6 = Math.floor(Math.random() * (max  min) + min);
-          var r7 = Math.floor(Math.random() * (max  min) + min);
-          var r8 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
+          var r8 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7+r8
           message.channel.send({embed: {
             color: 12434877,
@@ -170,15 +170,15 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "9":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
-          var r6 = Math.floor(Math.random() * (max  min) + min);
-          var r7 = Math.floor(Math.random() * (max  min) + min);
-          var r8 = Math.floor(Math.random() * (max  min) + min);
-          var r9 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
+          var r8 = Math.floor(Math.random() * (max - min) + min);
+          var r9 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7+r8+r9
           message.channel.send({embed: {
             color: 12434877,
@@ -187,16 +187,16 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           break;
 
         case "10":
-          var r1 = Math.floor(Math.random() * (max  min) + min);
-          var r2 = Math.floor(Math.random() * (max  min) + min);
-          var r3 = Math.floor(Math.random() * (max  min) + min);
-          var r4 = Math.floor(Math.random() * (max  min) + min);
-          var r5 = Math.floor(Math.random() * (max  min) + min);
-          var r6 = Math.floor(Math.random() * (max  min) + min);
-          var r7 = Math.floor(Math.random() * (max  min) + min);
-          var r8 = Math.floor(Math.random() * (max  min) + min);
-          var r9 = Math.floor(Math.random() * (max  min) + min);
-          var r10 = Math.floor(Math.random() * (max  min) + min);
+          var r1 = Math.floor(Math.random() * (max - min) + min);
+          var r2 = Math.floor(Math.random() * (max - min) + min);
+          var r3 = Math.floor(Math.random() * (max - min) + min);
+          var r4 = Math.floor(Math.random() * (max - min) + min);
+          var r5 = Math.floor(Math.random() * (max - min) + min);
+          var r6 = Math.floor(Math.random() * (max - min) + min);
+          var r7 = Math.floor(Math.random() * (max - min) + min);
+          var r8 = Math.floor(Math.random() * (max - min) + min);
+          var r9 = Math.floor(Math.random() * (max - min) + min);
+          var r10 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7+r8+r9+r10
           message.channel.send({embed: {
             color: 12434877,
