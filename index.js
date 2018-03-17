@@ -347,7 +347,7 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           var r7 = Math.floor(Math.random() * (6 - min) + min);
           var r8 = Math.floor(Math.random() * (6 - min) + min);
           var r9 = Math.floor(Math.random() * (6 - min) + min);
-          var r10 = Math.floor(Math.random() * (max  min) + min);
+          var r10 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7+r8+r9+r10
           message.channel.send({embed: {
             color: 12434877,
@@ -494,7 +494,7 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
           var r7 = Math.floor(Math.random() * (6 - min) + min);
           var r8 = Math.floor(Math.random() * (6 - min) + min);
           var r9 = Math.floor(Math.random() * (6 - min) + min);
-          var r10 = Math.floor(Math.random() * (max  min) + min);
+          var r10 = Math.floor(Math.random() * (max - min) + min);
           var result = r1+r2+r3+r4+r5+r6+r7+r8+r9+r10
           message.channel.send({embed: {
             color: 12434877,
