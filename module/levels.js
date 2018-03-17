@@ -30,7 +30,6 @@ module.exports = function (client) {
 
     request(url, (err, res, body) => { // DEBUT DU REQUEST
       // si sa arrive la on log
-      console.log("2")
       // Si y'a une erreur
       if(err || res.statusCode!== 200)return // SI YA UNE ERREUR
       // Si y'en a pas
