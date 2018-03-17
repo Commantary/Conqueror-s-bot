@@ -1,8 +1,9 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
-var bdd_number = process.env.BDDNUMBER || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = async (client, message, args) => {
 
@@ -21,13 +22,15 @@ module.exports.run = async (client, message, args) => {
 
 			data[guyLowerCase] = {
 				"tag": "!" + guyAtAdd + "!",
+				"id": message.author.id,
 				"name": guyAtAdd,
 				"empereur": "non",
 				"membre": "Ne fais pas partie du Conseil Noir",
 				"power": "Aucun",
 			    "planetes": 10,
 			    "armees": 20,
-			    "flottes": 20
+			    "flottes": 20,
+			    "argent": 0
 			}
 			// On put tout sa!
 			request({ url: bdd, method: 'PUT', json: data}, callback)

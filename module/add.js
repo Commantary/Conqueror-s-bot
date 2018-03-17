@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 	    } // FIN DE CALLBACK
 
 	    if(args[0]==="planete"){
-	    	var searchPersonnUnverified = message.content.substring(15,50).trim()
+	    	var searchPersonnUnverified = args[2]
 	    	request.get(bdd, function (err, res, body) {
 
 			    var data = JSON.parse(body)
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
 	    } // FIN DE L'ADD PLANETE
 
 	    if(args[0]==="armee"){
-	    	var searchPersonnUnverified = message.content.substring(13,50).trim()
+	    	var searchPersonnUnverified = args[2]
 
 	    	request.get(bdd, function (err, res, body) {
 			    var data = JSON.parse(body)
@@ -60,8 +60,8 @@ module.exports.run = async (client, message, args) => {
 			}) // FIN DU REQUEST
 	    } // FIN DE L'ADD ARMEES
 
-	    if(args[0]==="flotte"){
-	    	var searchPersonnUnverified = message.content.substring(14,50).trim()
+	    if(args[0]==="argent"){
+	    	var searchPersonnUnverified = args[2]
 
 	    	request.get(bdd, function (err, res, body) {
 			    var data = JSON.parse(body)
@@ -69,15 +69,15 @@ module.exports.run = async (client, message, args) => {
 		    	if(data[searchPersonnUnverified]!==undefined){ // PR VERIF SI LE GARS EXISTE
 		    		// Variables
 		    		var searchPersonn = data[searchPersonnUnverified]
-		    			oldFlottes = searchPersonn.flottes
-				    	searchPersonn.flottes = searchPersonn.flottes+montant
+		    			oldArmees = searchPersonn.argent
+				    	searchPersonn.argent = searchPersonn.argent+montant
 
 				    	// On put tout sa!
 			      		request({ url: bdd, method: 'PUT', json: data}, callback)
 
 			      		message.channel.send({embed: {
 			      			color: 11133683,
-			      			description: "**" + message.author.username + "** a rajouté **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldFlottes + "\nMaintenant: # " + searchPersonn.flottes + "\n```"
+			      			description: "**" + message.author.username + "** a rajouté **" + montant + "** argent à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldArmees + "\nMaintenant: # " + searchPersonn.argent + "\n```"
 			      		}})
 
 				    }

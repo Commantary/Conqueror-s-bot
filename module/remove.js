@@ -1,7 +1,9 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 
 module.exports.run = async (client, message, args) => {
@@ -14,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 	    } // FIN DE CALLBACK
 
 	    if(args[0]==="planete"){
-	    	var searchPersonnUnverified = message.content.substring(18,50).trim()
+	    	var searchPersonnUnverified = args[2]
 	    	request.get(bdd, function (err, res, body) {
 
 			    var data = JSON.parse(body)
@@ -34,10 +36,10 @@ module.exports.run = async (client, message, args) => {
 
 				    }
 			}) // FIN DU REQUEST
-	    } // FIN DE L'ADD PLANETE
+	    } // FIN DU REMOVE PLANETE
 
 	    if(args[0]==="armee"){
-	    	var searchPersonnUnverified = message.content.substring(16,50).trim()
+	    	var searchPersonnUnverified = args[2]
 
 	    	request.get(bdd, function (err, res, body) {
 			    var data = JSON.parse(body)
@@ -58,10 +60,10 @@ module.exports.run = async (client, message, args) => {
 
 				    }
 			}) // FIN DU REQUEST
-	    } // FIN DE L'ADD ARMEES
+	    } // FIN DU REMOVE ARMEE
 
-	    if(args[0]==="flotte"){
-	    	var searchPersonnUnverified = message.content.substring(17,50).trim()
+	    if(args[0]==="argent"){
+	    	var searchPersonnUnverified = args[2]
 
 	    	request.get(bdd, function (err, res, body) {
 			    var data = JSON.parse(body)
@@ -69,19 +71,19 @@ module.exports.run = async (client, message, args) => {
 		    	if(data[searchPersonnUnverified]!==undefined){ // PR VERIF SI LE GARS EXISTE
 		    		// Variables
 		    		var searchPersonn = data[searchPersonnUnverified]
-		    			oldFlottes = searchPersonn.flottes
-				    	searchPersonn.flottes = searchPersonn.flottes-montant
+		    			oldArmees = searchPersonn.argent
+				    	searchPersonn.argent = searchPersonn.argent-montant
 
 				    	// On put tout sa!
 			      		request({ url: bdd, method: 'PUT', json: data}, callback)
 
 			      		message.channel.send({embed: {
 			      			color: 11133683,
-			      			description: "**" + message.author.username + "** a enlevé **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldFlottes + "\nMaintenant: # " + searchPersonn.flottes + "\n```"
+			      			description: "**" + message.author.username + "** a enlevé **" + montant + "** argent à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldArmees + "\nMaintenant: # " + searchPersonn.argent + "\n```"
 			      		}})
 
 				    }
 			}) // FIN DU REQUEST
-	    } // FIN DE L'ADD ARMEES
+	    } // FIN DU REMOVE ARGENT
 
 } // FIN DU MODULE EXPORTS

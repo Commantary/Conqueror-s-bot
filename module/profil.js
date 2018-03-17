@@ -1,14 +1,15 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = async (client, message, args) => {
 	console.log(args[0] + "|" + args[1] + "|" + args[2])
 			request.get(bdd, function (err, res, body) {
 			var data = JSON.parse(body)
 			var searchPersonnUnverified = message.content.substring(8,50)
-			console.log(searchPersonnUnverified)
 			if(args[0]==undefined) return
 
 			if (data[searchPersonnUnverified]!==undefined){
@@ -29,10 +30,6 @@ module.exports.run = async (client, message, args) => {
 					        value: searchPersonn.power
 					      },
 					      {
-					        name: "Description",
-					        value: searchPersonn.description
-					      },
-					      {
 					        name: "planètes:",
 					        value: searchPersonn.planetes + "\n"
 					      },
@@ -41,8 +38,8 @@ module.exports.run = async (client, message, args) => {
 					      	value: searchPersonn.armees + "\n"
 					      },
 					      {
-					      	name: "Flottes:",
-					      	value: searchPersonn.flottes + "\n"
+					      	name: "Argents",
+					      	value: searchPersonn.argent + "\n"
 					      }
 					    ]
 					}}) // Fin de l'embed

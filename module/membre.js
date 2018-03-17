@@ -1,7 +1,9 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = async (client, message, args) => {
 	

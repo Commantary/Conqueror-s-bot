@@ -1,8 +1,9 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
-var bdd_number = process.env.BDDNUMBER || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = async (client, message, args) => {
 	// LES VARIABLES
@@ -14,7 +15,6 @@ module.exports.run = async (client, message, args) => {
 	request.get(bdd, function (err, res, body) {
 		var data = JSON.parse(body)
 		var teste = body.split("!")
-		console.log(teste[1])
 
 		for(i=0;i<teste.length;i++){
 				i++
@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 			
 			for(c = 1;a<length_array;){
 				var personn = json[c].name
-				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees
+				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees + " **|** flottes: " + data[personn].flottes
 				a++
 				c++
 			}
