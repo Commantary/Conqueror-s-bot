@@ -221,7 +221,7 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
             break;
 
         case "1":
-          var result = Math.floor(Math.random() * (6  min) + min);
+          var result = Math.floor(Math.random() * (6 - min) + min);
           console.log(1)
           message.channel.send({embed: {
             color: 12434877,
@@ -368,7 +368,7 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
             break;
 
         case "1":
-          var result = Math.floor(Math.random() * (6  min) + min);
+          var result = Math.floor(Math.random() * (6 - min) + min);
           console.log(1)
           message.channel.send({embed: {
             color: 12434877,
