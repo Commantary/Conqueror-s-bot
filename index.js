@@ -292,7 +292,7 @@ if(nb2 = "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10"){
         case "7":
           var r1 = Math.floor(Math.random() * (6 - min) + min);
           var r2 = Math.floor(Math.random() * (6  -min) + min);
-          var r3 = Math.floor(Math.random() * (6  min) + min);
+          var r3 = Math.floor(Math.random() * (6 - min) + min);
           var r4 = Math.floor(Math.random() * (6 - min) + min);
           var r5 = Math.floor(Math.random() * (6 - min) + min);
           var r6 = Math.floor(Math.random() * (6 - min) + min);
