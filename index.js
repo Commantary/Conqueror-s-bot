@@ -22,9 +22,9 @@ client.on('ready', () => {
   setInterval(calling,43200000) // 24h = 86 400 000
     
   client.user.setGame('Lancer des dès')
-  console.log('')
+  console.log('----------------------------------------------')
   console.log('    [!] Conqueror\'s bot beta connecté [!]')
-  console.log('')
+  console.log('----------------------------------------------')
   console.log('le prefix est: ' + setting.prefix)
 })
 

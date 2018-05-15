@@ -5,7 +5,7 @@ var config = require("./config.json")
 var bdd = config.bdd
 var bdd_number = config.bdd_number
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 
 	if(message.author.id === "214846601066315776" ||message.author.id === "379345863903936522" || message.author.id === "214846601066315776"){
 
@@ -60,9 +60,7 @@ module.exports.run = async (client, message, args) => {
 				request({ url: bdd_number, method: 'PUT', json: json}, callback)
 
 			})
-		}).catch(err){
-			console.log(err)
-		}
+		})
 
 	}
 
