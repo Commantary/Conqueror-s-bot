@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 var bdd = process.env.BDD || process.argv[2]
 
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 		var montant = Number(args[1])
 
 		function callback(err, response, body) { // DEBUT DE CALLBACK

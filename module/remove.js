@@ -6,7 +6,7 @@ var bdd = config.bdd
 var bdd_number = config.bdd_number
 
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 		var montant = Number(args[1])
 
 		function callback(err, response, body) { // DEBUT DE CALLBACK

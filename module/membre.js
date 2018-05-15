@@ -5,7 +5,7 @@ var config = require("./config.json")
 var bdd = config.bdd
 var bdd_number = config.bdd_number
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 	
 	if(message.author.id === "214846601066315776" ||message.author.id === "379345863903936522" || message.author.id === "214846601066315776"){
 		console.log(message.content.substring(10,50))

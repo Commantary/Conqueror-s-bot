@@ -2,7 +2,7 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 
-module.exports.run = async (client) => {
+module.exports.run = (client) => {
 	//console.log(client.channels.find('name', 'general'))
 	var general = client.channels.find('name', 'datanews')
 

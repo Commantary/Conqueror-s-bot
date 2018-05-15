@@ -7,7 +7,7 @@ var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
 
-	if(message.author.id === "214846601066315776" ||message.author.id === "379345863903936522" || message.author.id === "214846601066315776"){
+	if(message.author.id === "214846601066315776" || message.author.id === "379345863903936522" || message.author.id === "214846601066315776"){
 
 		request.get(bdd, function (err, res, body) {
 			function callback(err, response, body) { // DEBUT DE CALLBACK
@@ -30,7 +30,7 @@ module.exports.run = (client, message, args) => {
 			    "planetes": 10,
 			    "armees": 20,
 			    "flottes": 20,
-			    "argent": 0
+			    "argent": 6
 			}
 			// On put tout sa!
 			request({ url: bdd, method: 'PUT', json: data}, callback)

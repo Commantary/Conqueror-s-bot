@@ -5,7 +5,7 @@ var config = require("./config.json")
 var bdd = config.bdd
 var bdd_number = config.bdd_number
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 	// LES VARIABLES
 	var array = []
 	a = 0
@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 			
 			for(c = 1;a<length_array;){
 				var personn = json[c].name
-				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees + " **|** flottes: " + data[personn].flottes
+				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees + " **|** flottes: " + data[personn].flottes + " **|** argents: " + data[personn].argent
 				a++
 				c++
 			}

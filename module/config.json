@@ -1,5 +1,6 @@
 {
   "prefix":"=",
   "bdd": "process.env.BDD || process.argv[2]",
-  "bdd_number": "process.env.BDDNUMBER || process.argv[2]"
+  "bdd_number": "process.env.BDDNUMBER || process.argv[2]",
+  "url": "https://api.myjson.com/bins/rc0gb"
 }

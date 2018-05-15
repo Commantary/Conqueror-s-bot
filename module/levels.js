@@ -8,7 +8,7 @@ const fs = require('fs')
 var roll = Math.floor(Math.random() * 50)
 const config = JSON.parse(fs.readFileSync('./module/config.json', 'utf8'))
 const prefix = config.prefix
-    var url = "https://api.myjson.com/bins/rc0gb"
+    var url = config.url
   if (!url) {
   console.log('L\'url n\'existe pas!')
   }

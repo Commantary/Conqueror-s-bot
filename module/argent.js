@@ -5,7 +5,7 @@ var config = require("./config.json")
 var bdd = config.bdd
 var bdd_number = config.bdd_number
 
-module.exports.run = async (client) => {
+module.exports.run = (client) => {
 	// LES VARIABLES
 	var array = []
 	a = 0
@@ -19,13 +19,13 @@ module.exports.run = async (client) => {
 
 		for(i=0;i<teste.length;i++){
 				i++
-				array[a] = "**[" + c + "]** " + teste[i]
+				array[a] = teste[i]
 				a++
 				c++
 		}
 		a--
 		c--
-		array[a] = "**[" + c + "]** ?????"
+		array[a] = "?????"
 		
 		request.get(bdd_number, function (err, res, body) {
 			function callback(err, response, body) { // DEBUT DE CALLBACK
@@ -37,21 +37,20 @@ module.exports.run = async (client) => {
 			var json = JSON.parse(body)
 			var length_array = array.length-1
 			a = 0
-			
-			for(c = 1;a<length_array+1;){
+
+			for(c = 1;a<length_array;){
 
 				var personn = json[c].name
-				
+					
 				console.log("Paye pour " + data[personn].name)
 				let datanews = client.channels.find('name', 'datanews')
-				if(b!==0){
-					let emoji = client.emojis.random(1)
-					data[personn].argent += 10 * data[personn].planetes
-					datanews.send({embed: {
-						color: 8510197,
-						description: `L'argent du jour à été ajouter a ` + data[personn].name + `  ${emoji} \n\`\`\`Markdown\n+ ` + 10*data[personn].planetes + `$\n# ` + data[personn].planetes + ` planetes\`\`\``
-					}})
-				}
+				
+				let emoji = client.emojis.random(1)
+				data[personn].argent += 10 * data[personn].planetes
+				datanews.send({embed: {
+					color: 8510197,
+					description: `L'argent du jour à été ajouter a ` + data[personn].name + `  ${emoji} \n\`\`\`Markdown\n+ ` + 10*data[personn].planetes + `$\n# ` + data[personn].planetes + ` planetes\n# ` + data[personn].argent + ` $\`\`\``
+				}})
 				
 				a++
 				c++
@@ -60,7 +59,7 @@ module.exports.run = async (client) => {
 
 			// On put tout sa!
 			request({ url: bdd, method: 'PUT', json: data}, callback)
-			console.log(array)
+			//console.log(array)
 
 		})
 	})

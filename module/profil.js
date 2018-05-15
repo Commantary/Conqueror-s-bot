@@ -5,7 +5,7 @@ var config = require("./config.json")
 var bdd = config.bdd
 var bdd_number = config.bdd_number
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 	console.log(args[0] + "|" + args[1] + "|" + args[2])
 			request.get(bdd, function (err, res, body) {
 			var data = JSON.parse(body)
