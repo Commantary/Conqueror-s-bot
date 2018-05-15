@@ -60,7 +60,9 @@ module.exports.run = async (client, message, args) => {
 				request({ url: bdd_number, method: 'PUT', json: json}, callback)
 
 			})
-		})
+		}).catch(err){
+			console.log(err)
+		}
 
 	}
 
