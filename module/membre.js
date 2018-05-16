@@ -7,7 +7,7 @@ var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
 	
-	if(message.author.id === "214846601066315776" ||message.author.id === "379345863903936522" || message.author.id === "214846601066315776"){
+	if(message.member.roles.find("name", "Garde Royale")){
 		console.log(message.content.substring(10,50))
 		request.get(bdd, function (err, res, body) {
 			function callback(err, response, body) { // DEBUT DE CALLBACK

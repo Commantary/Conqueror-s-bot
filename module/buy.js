@@ -38,7 +38,7 @@ module.exports.run = (client, message, args) => {
 		let numbers = args[1]
 		let username = args[2]
 
-		if (message.author.id == username.id || message.author.id == "214846601066315776"){
+		if (message.author.id == username.id || message.member.roles.find("name", "Garde Royale")){
 			request.get(bdd, function (err, res, body) {
 				function callback(err, response, body) { // DEBUT DE CALLBACK
 			      if (err) {
@@ -57,6 +57,11 @@ module.exports.run = (client, message, args) => {
 
 					// On put tout sa!
 					request({ url: bdd, method: 'PUT', json: json}, callback)
+				} else {
+					message.channel.send({embed: {
+						color: 16711744,
+						description: "Tu n'as pas asser d'argent !"
+					}})
 				}
 
 			}) // FIN DU REQUEST

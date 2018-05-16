@@ -15,6 +15,7 @@ module.exports.run = (client, message, args) => {
 			if (data[searchPersonnUnverified]!==undefined){
 				var searchPersonn = data[searchPersonnUnverified]
 
+				if (message.author.id == searchPersonn.id || message.member.roles.find("name", "Garde Royale")){
 					message.channel.send({embed: {
 						color: 11133683,
 						fields: [{
@@ -43,6 +44,13 @@ module.exports.run = (client, message, args) => {
 					      }
 					    ]
 					}}) // Fin de l'embed
+
+				} else {
+					message.channel.send({embed: {
+						color: 16711744,
+						description: "Tu n'es pas __" + username + "__!"
+					}})
+				}
 
 			} else {
 				message.channel.send({embed: {

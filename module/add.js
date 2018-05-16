@@ -19,20 +19,20 @@ module.exports.run = (client, message, args) => {
 
 			    var data = JSON.parse(body)
 		    	if(data[searchPersonnUnverified]!==undefined){
-		    		// Variables
-		    		var searchPersonn = data[searchPersonnUnverified]
-		    		var oldPlanetes = searchPersonn.planetes
-				    	searchPersonn.planetes = searchPersonn.planetes+montant
+	    		// Variables
+	    		var searchPersonn = data[searchPersonnUnverified]
+	    		var oldPlanetes = searchPersonn.planetes
+			    	searchPersonn.planetes = searchPersonn.planetes+montant
 
-				    	// On put tout sa!
-			      		request({ url: bdd, method: 'PUT', json: data}, callback)
+			    	// On put tout sa!
+		      		request({ url: bdd, method: 'PUT', json: data}, callback)
 
-			      		message.channel.send({embed: {
-							color: 11133683,
-			      			description: "**" + message.author.username + "** a rajouté **" + montant + "** planètes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldPlanetes + "\nMaintenant: # " + searchPersonn.planetes + "\n```"
-			      		}})
+		      		message.channel.send({embed: {
+						color: 11133683,
+		      			description: "**" + message.author.username + "** a rajouté **" + montant + "** planètes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldPlanetes + "\nMaintenant: # " + searchPersonn.planetes + "\n```"
+		      		}})
 
-				    }
+			    }
 			}) // FIN DU REQUEST
 	    } // FIN DE L'ADD PLANETE
 
