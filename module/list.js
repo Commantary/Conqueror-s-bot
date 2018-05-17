@@ -32,6 +32,7 @@ module.exports.run = (client, message, args) => {
 			a = 0
 			
 			for(c = 1;a<length_array;){
+				console.log(c)
 				var personn = json[c].name
 				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees + " **|** flottes: " + data[personn].flottes + " **|** argents: " + data[personn].argent
 				a++

@@ -6,16 +6,16 @@ var bdd = config.bdd
 var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
-	console.log(args[0] + "|" + args[1] + "|" + args[2])
+		console.log(config.prefix + "profil " + args[0])
 			request.get(bdd, function (err, res, body) {
 			var data = JSON.parse(body)
-			var searchPersonnUnverified = message.content.substring(8,50)
+			var searchPersonnUnverified = args[0]
 			if(args[0]==undefined) return
 
 			if (data[searchPersonnUnverified]!==undefined){
 				var searchPersonn = data[searchPersonnUnverified]
 
-				if (message.author.id == searchPersonn.id || message.member.roles.find("name", "Garde Royale")){
+				if (message.author.id == searchPersonn.id || message.member.roles.find("name", "Garde Royal")){
 					message.channel.send({embed: {
 						color: 11133683,
 						fields: [{
@@ -48,7 +48,7 @@ module.exports.run = (client, message, args) => {
 				} else {
 					message.channel.send({embed: {
 						color: 16711744,
-						description: "Tu n'es pas __" + username + "__!"
+						description: "Tu n'es pas __" + args[0] + "__!"
 					}})
 				}
 
