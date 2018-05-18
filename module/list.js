@@ -2,11 +2,10 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var config = require("./config.json")
-var bdd = process.env.BDD || process.argv[2]
-var bdd_number = process.env.BDDNUMBER || process.argv[2]
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
-	console.log(3)
 	// LES VARIABLES
 	var array = []
 	a = 0
@@ -14,7 +13,6 @@ module.exports.run = (client, message, args) => {
 	c = 1
 
 	request.get(bdd, function (err, res, body) {
-		console.log("1er request")
 		var data = JSON.parse(body)
 		var teste = body.split("!")
 
@@ -29,7 +27,6 @@ module.exports.run = (client, message, args) => {
 		array[a] = "**[" + c + "]** ?????"
 		
 		request.get(bdd_number, function (err, res, body) {
-			console.log("Deuxieme request")
 			var json = JSON.parse(body)
 			var length_array = array.length-1
 			a = 0

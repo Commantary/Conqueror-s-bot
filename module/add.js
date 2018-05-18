@@ -1,7 +1,8 @@
 const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
-var bdd = process.env.BDD || process.argv[2]
+var config = require("./config.json")
+var bdd = config.bdd
 
 
 module.exports.run = (client, message, args) => {
@@ -54,6 +55,30 @@ module.exports.run = (client, message, args) => {
 			      		message.channel.send({embed: {
 			      			color: 11133683,
 			      			description: "**" + message.author.username + "** a rajouté **" + montant + "** armées à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldArmees + "\nMaintenant: # " + searchPersonn.armees + "\n```"
+			      		}})
+
+				    }
+			}) // FIN DU REQUEST
+	    } // FIN DE L'ADD ARMEES
+
+	    if(args[0]==="flotte"){
+	    	var searchPersonnUnverified = args[2]
+
+	    	request.get(bdd, function (err, res, body) {
+			    var data = JSON.parse(body)
+
+		    	if(data[searchPersonnUnverified]!==undefined){ // PR VERIF SI LE GARS EXISTE
+		    		// Variables
+		    		var searchPersonn = data[searchPersonnUnverified]
+		    			oldArmees = searchPersonn.flottes
+				    	searchPersonn.flottes = searchPersonn.flottes+montant
+
+				    	// On put tout sa!
+			      		request({ url: bdd, method: 'PUT', json: data}, callback)
+
+			      		message.channel.send({embed: {
+			      			color: 11133683,
+			      			description: "**" + message.author.username + "** a rajouté **" + montant + "** flottes à **" + searchPersonn.name + "**\n```Markdown\nAvant: # " + oldArmees + "\nMaintenant: # " + searchPersonn.armees + "\n```"
 			      		}})
 
 				    }
