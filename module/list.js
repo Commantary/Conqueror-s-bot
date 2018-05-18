@@ -6,6 +6,7 @@ var bdd = config.bdd
 var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
+	console.log(3)
 	// LES VARIABLES
 	var array = []
 	a = 0
