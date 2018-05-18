@@ -14,6 +14,7 @@ module.exports.run = (client, message, args) => {
 	c = 1
 
 	request.get(bdd, function (err, res, body) {
+		console.log("1er request")
 		var data = JSON.parse(body)
 		var teste = body.split("!")
 
@@ -28,6 +29,7 @@ module.exports.run = (client, message, args) => {
 		array[a] = "**[" + c + "]** ?????"
 		
 		request.get(bdd_number, function (err, res, body) {
+			console.log("Deuxieme request")
 			var json = JSON.parse(body)
 			var length_array = array.length-1
 			a = 0
