@@ -2,8 +2,8 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var config = require("./config.json")
-var bdd = process.env.BDD || process.argv[2]
-var bdd_number = process.env.BDDNUMBER || process.argv[2]
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
 		console.log(config.prefix + "profil " + args[0])
@@ -11,7 +11,6 @@ module.exports.run = (client, message, args) => {
 			var data = JSON.parse(body)
 			var searchPersonnUnverified = args[0]
 			if(args[0]==undefined) return
-
 			if (data[searchPersonnUnverified]!==undefined){
 				var searchPersonn = data[searchPersonnUnverified]
 

@@ -2,8 +2,8 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var config = require("./config.json")
-var bdd = process.env.BDD || process.argv[2]
-var bdd_number = process.env.BDDNUMBER || process.argv[2]
+var bdd = config.bdd
+var bdd_number = config.bdd_number
 
 module.exports.run = (client, message, args) => {
 	// LES VARIABLES
@@ -32,8 +32,8 @@ module.exports.run = (client, message, args) => {
 			a = 0
 			
 			for(c = 1;a<length_array;){
-				console.log(c)
-				var personn = json[c].name
+				console.log(c + " | " + json[c].name)
+				var personn = json[c].nameLowerCase
 				array[a] = array[a] + " **|** planetes: " + data[personn].planetes + " **|** armees: " + data[personn].armees + " **|** flottes: " + data[personn].flottes + " **|** argents: " + data[personn].argent
 				a++
 				c++
