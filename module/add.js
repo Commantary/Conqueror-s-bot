@@ -2,7 +2,7 @@ const request = require('request')
 const fs = require('fs')
 const Discord = require('discord.js')
 var config = require("./config.json")
-var bdd = config.bdd
+var bdd = process.env.BDD || process.argv[2]
 
 
 module.exports.run = (client, message, args) => {
