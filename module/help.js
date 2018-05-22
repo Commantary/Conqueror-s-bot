@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 
 		message.channel.send({embed: {
 		color: 11133683,
-		description: "=profil [pseudo sans maj]\n=add [planete/armee] [montant] [pseudo sans maj]\n=remove [planete/armee] [montant] [pseudo sans maj]\n=buy [armee/flotte] [montant] [pseudo sans maj]\n=sell [armee/flotte] [montant] [pseudo du vendeur sans maj] [pseudo de l'acheteur sans maj]\n=list"
+		description: "=profil [pseudo sans maj]\n=add [planete/armee] [montant] [pseudo sans maj]\n=remove [planete/armee] [montant] [pseudo sans maj]\n=buy [armee/flotte] [montant] [pseudo sans maj]\n=sell [armee/flotte] [montant] [pseudo du vendeur sans maj] [pseudo de l'acheteur sans maj]\n=armee [1 à 10]\n=flotte [1 à 10]\n=list"
 		}})
 
 	}
